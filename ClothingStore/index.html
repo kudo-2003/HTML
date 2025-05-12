@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing & Shoe Store</title>
+    <link rel="stylesheet" href="./public/styles/nav.css">
+    <link rel="stylesheet" href="./public/styles/header.css">
+    <link rel="stylesheet" href="./public/styles/footer.css">
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+    <div id="header-placeholder"></div>
+
+    <section id="home">
+        <h2>Welcome to Our Store</h2>
+        <p>Discover the latest trends in clothing and footwear.</p>
+    </section>
+
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product">
+            <h3>Men's Clothing</h3>
+            <p>Stylish and comfortable apparel for men.</p>
+        </div>
+        <div class="product">
+            <h3>Women's Clothing</h3>
+            <p>Elegant and trendy outfits for women.</p>
+        </div>
+        <div class="product">
+            <h3>Shoes</h3>
+            <p>Durable and fashionable footwear for all occasions.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a leading retailer of high-quality clothing and shoes, committed to providing the best shopping experience.</p>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+<script>
+    // Load navigation bar
+    fetch('./public/html/components/nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+        });
+
+    // Load header
+    fetch('./public/html/components/header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+
+    // Load footer
+    fetch('./public/html/components/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+</script>
+</body>
+</html>
